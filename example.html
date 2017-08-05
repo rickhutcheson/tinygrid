@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="tinygrid.css">
+  <title>tinygrid test</title>
+</head>
+<style>
+  [class*='c-'] {
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  div p,
+  .box {
+    margin: 10px 0;
+    height: 20px;
+    line-height: 20px;
+    background-color: blue;
+      color: white;
+      width: 100%;
+    border: solid 1px black;
+    text-align: center;
+    padding: 0;
+  }
+  div {
+    margin-bottom: 10px;
+  }
+</style>
+
+<body>
+  <div class="grid">
+    <div class="r">
+      <div class="c-12">
+        <p>12-columns</p>
+      </div>
+    </div>
+    <div class="r">
+      <div class="c-6">
+        <p>6-columns</p>
+      </div>
+      <div class="c-6">
+        <p>6-columns</p>
+      </div>
+    </div>
+    <div class="r">
+      <div class="c-4">
+        <p>4-columns</p>
+      </div>
+      <div class="c-4">
+        <p>4-columns</p>
+      </div>
+      <div class="c-4">
+        <p>4-columns</p>
+      </div>
+    </div>
+    <div class="r">
+      <div class="c-1 push-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1 push-6">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+
+    <div class="r">
+      <div class="push-11 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-10 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-9 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-8 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-7 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-6 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-5 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-4 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-3 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="push-2 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+
+    <div class="r">
+      <div class="push-1 c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <div class="c-1">
+        <p>1-column</p>
+      </div>
+    </div>
+
+    <div class="r">
+      <!-- 1 column -->
+      <div class="c-1">
+        <div class="box">.c-1</div>
+      </div>
+
+      <!-- 2 columns -->
+      <div class="c-2">
+        <div class="box">.c-2</div>
+      </div>
+
+      <div class="c-2">
+        <div class="box">.c-2</div>
+      </div>
+
+      <!-- 3 columns -->
+      <div class="c-3">
+        <div class="box">.c-3</div>
+      </div>
+
+      <div class="c-3">
+        <div class="box">.c-3</div>
+      </div>
+
+      <div class="c-3">
+        <div class="box">.c-3</div>
+      </div>
+
+      <!-- 4 columns -->
+      <div class="c-4">
+        <div class="box">.c-4</div>
+      </div>
+
+      <div class="c-4">
+        <div class="box">.c-4</div>
+      </div>
+
+      <div class="c-4">
+        <div class="box">.c-4</div>
+      </div>
+
+      <div class="c-4">
+        <div class="box">.c-4</div>
+      </div>
+
+      <!-- 5 columns -->
+      <div class="c-5">
+        <div class="box">.c-5</div>
+      </div>
+
+      <div class="c-5">
+        <div class="box">.c-5</div>
+      </div>
+
+      <div class="c-5">
+        <div class="box">.c-5</div>
+      </div>
+
+      <div class="c-5">
+        <div class="box">.c-5</div>
+      </div>
+
+      <div class="c-5">
+        <div class="box">.c-5</div>
+      </div>
+
+      <!-- 6 columns -->
+      <div class="c-6">
+        <div class="box">.c-6</div>
+      </div>
+
+      <div class="c-6">
+        <div class="box">.c-6</div>
+      </div>
+
+      <div class="c-6">
+        <div class="box">.c-6</div>
+      </div>
+
+      <div class="c-6">
+        <div class="box">.c-6</div>
+      </div>
+
+      <div class="c-6">
+        <div class="box">.c-6</div>
+      </div>
+
+      <div class="c-6">
+        <div class="box">.c-6</div>
+      </div>
+
+      <!-- 7 columns -->
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <div class="c-7">
+        <div class="box">.c-7</div>
+      </div>
+
+      <!-- 8 columns -->
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <div class="c-8">
+        <div class="box">.c-8</div>
+      </div>
+
+      <!-- 9 columns -->
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <div class="c-9">
+        <div class="box">.c-9</div>
+      </div>
+
+      <!-- 10 columns -->
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <div class="c-10">
+        <div class="box">.c-10</div>
+      </div>
+
+      <!-- 11 columns -->
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <div class="c-11">
+        <div class="box">.c-11</div>
+      </div>
+
+      <!-- 12 columns -->
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+
+      <div class="c-12">
+        <div class="box">.c-12</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

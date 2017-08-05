@@ -1,0 +1,15 @@
+{
+    "dependencies": {
+        "less": "^2.7.2"
+    },
+    "name": "tinygrid",
+    "version": "1.0.0",
+    "description": "A tiny grid system based on flexbox",
+    "main": "tinygrid.less",
+    "repository": "https://github.com/rickhutcheson/tinygrid.git",
+    "author": "Rick Hutcheson <rick@oddlyaccurate.com>",
+    "license": "MIT",
+    "scripts": {
+        "css": "lessc tinygrid.less > tinygrid.css"
+    }
+}

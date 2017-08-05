@@ -1,0 +1,90 @@
+/*---------------------------------------------------------------------
+ * Usage:
+ * - don't change the left/right padding of `.r` or a `.c-*` elements
+ *-------------------------------------------------------------------*/
+
+@number-of-columns: 12;
+@column-percentage: 100% / @number-of-columns;
+@min-column-size: 80px;
+@max-column-size: 100px;
+@gutter-size: 10px;
+// 20px gutter between each AND at ends
+@large-width: ((@number-of-columns * @min-column-size) + (@gutter-size * (@number-of-columns + 1)));
+@grid-width: ((@number-of-columns * @max-column-size) + (@gutter-size * (@number-of-columns + 1)));
+@column-width: @grid-width / @number-of-columns;
+// resets
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.r {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media only screen and (min-width: @large-width) {
+        flex-direction: row;
+    }
+}
+
+
+.create-push(@cn, @n) when (@n > 0) {
+    .c-@{cn}.push-@{n} {
+        margin: 0;
+
+        @media only screen and (min-width: @large-width) {
+            margin-left: @n * @column-percentage;
+            margin-right: 0;  // made up for by padding later
+            max-width: @cn * @column-percentage;
+        }
+    }
+    .create-push(@cn, @n - 1);
+}
+
+.create-pull(@cn, @n) when (@n > 0) {
+    .c-@{cn}.pull-@{n} {
+        margin-right: 0;
+        @media only screen and (min-width: @large-width) {
+            margin-right: (@n * @grid-width / @number-of-columns);
+        }
+    }
+    .create-pull(@cn, @n - 1);
+}
+
+.create-grid(@n) when (@n =1) {
+    @media only screen and (min-width: @large-width) {
+        padding-left: 20px;
+    }
+}
+
+.create-grid(@n) when (@n > 0) {
+    .c-@{n} {
+        width: 100%;
+        padding: 0 @gutter-size / 2;
+
+        .outer & {
+            margin: 0;
+        }
+
+        @media only screen and (min-width: @large-width) {
+            max-width: (@n * @column-percentage);
+            flex: 1 1 auto;
+        }
+    }
+
+    .create-push(@n, @number-of-columns);
+    .create-pull(@n, @number-of-columns);
+
+    .create-grid(@n - 1);
+}
+
+.create-grid(@number-of-columns);
